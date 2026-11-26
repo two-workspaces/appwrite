@@ -1,6 +1,6 @@
 # Usage store (Appwrite 2.x keeps usage metrics in ClickHouse only). Same quiet
 # config as the langfuse template: console logs, self-telemetry tables off.
-FROM clickhouse/clickhouse-server:26.4.3-alpine
+FROM clickhouse/clickhouse-server:26.11.2-alpine
 
 COPY railway.xml /etc/clickhouse-server/config.d/railway.xml
 # Stock file binds :: and 0.0.0.0; on Railway :: is already dual-stack, so the
